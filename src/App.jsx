@@ -1,20 +1,15 @@
 import Home_page from "./pages/Home_page";
 import Meal_page from "./pages/Meal";
-import Left from "./components/left";
 import Workout_page from "./pages/Workout_page";
-{/* <Home_page /> */}
+import { Routes, Route } from "react-router-dom";
 function App() {
   return (
-    <div>
-      <Workout_page />
-    </div>
-    // <div className="min-h-screen bg-gray-200 flex">
-    //   <Left />
-    //   <div className="ml-56 flex-1 p-6">
-    //     <Meal_page />
-    //   </div>
-    // </div>
+    <Routes>
+      <Route path="/DashBoard" element={<Home_page/>}></Route>
+      <Route path="/Meal" element={<Meal_page/>}></Route>
+    </Routes>
   );
 }
 
 export default App;
+

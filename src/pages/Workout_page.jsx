@@ -10,4 +10,5 @@ const Workout_page = () => {
     </div>
   )
 }
+
 export default Workout_page
