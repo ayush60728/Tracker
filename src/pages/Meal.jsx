@@ -2,9 +2,9 @@ import Meal from "../components/meal"
 import Left from "../components/Left"
 const Meal_page = () => {
   return (
-    <div >
+    <div className="  bg-gray-200">
       <Left/>
-      <Meal/>
+      <div className="ml-50"><Meal/></div>
     </div>
   )
 }

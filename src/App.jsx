@@ -12,7 +12,6 @@ function App() {
         <Route path="/meal" element={<Meal_page />} />
         <Route path="/workout" element={<Workout_page />} />
       </Routes>
-
     </>
   );
 }

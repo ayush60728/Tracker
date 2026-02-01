@@ -5,7 +5,7 @@ const Text = () => {
       {/* Greeting */}
       <h1 className="text-3xl font-semibold mb-6">
         Hi, <span className="text-blue-600">Ayush</span> 👋  
-        <br />
+        <br/>
         <span className="text-lg text-gray-500">Welcome back</span>
       </h1>
 
