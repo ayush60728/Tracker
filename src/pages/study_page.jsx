@@ -1,5 +1,5 @@
 import Study from "../components/study"
-import Left from "../components/Left"
+import Left from "../components/left"
 const Study_page = () => {
   return (
     <div className="bg-gray-200">

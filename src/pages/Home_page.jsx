@@ -1,4 +1,4 @@
-import Left from "../components/Left"
+import Left from "../components/left"
 import Text from "../components/text"
 import Cale from "../components/Cale"
 

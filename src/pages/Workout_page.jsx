@@ -1,5 +1,5 @@
 import Workout from "../components/Workout"
-import Left from "../components/Left"
+import Left from "../components/left"
 const Workout_page = () => {
   return (
     <div className="flex bg-gray-200">

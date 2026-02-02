@@ -1,5 +1,5 @@
 import Meal from "../components/meal"
-import Left from "../components/Left"
+import Left from "../components/left"
 const Meal_page = () => {
   return (
     <div className="  bg-gray-200">
