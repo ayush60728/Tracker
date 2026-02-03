@@ -7,13 +7,13 @@ import Login_page from "./pages/Login_page";
 function App() {
   return (
     <>
-    <Login_page />
-      {/* <Routes>
+    {/* <Login_page /> */}
+      <Routes>
         <Route path="/" element={<Home_page />} />
         <Route path="/meal" element={<Meal_page />} />
         <Route path="/workout" element={<Workout_page />} />
         <Route path="/study" element={<Study_page/>} />
-      </Routes> */}
+      </Routes>
     </>
   );
 }

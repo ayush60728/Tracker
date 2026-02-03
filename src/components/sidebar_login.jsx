@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import Dashboard from "./dashboard";
+import { LogOut } from 'lucide-react'
+import { CookingPot } from "lucide-react"
+import { NotebookPen } from 'lucide-react'
+import { Dumbbell } from 'lucide-react'
+import { LayoutDashboard } from "lucide-react";
+
+
 const Left = () => {
     return (
         <motion.div
@@ -9,7 +15,7 @@ const Left = () => {
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="
         fixed top-7 left-3
-        h-[90vh] w-50
+        h-[90vh] w-25
         bg-[#0a1a3f]/90 backdrop-blur-xl
         text-white
         rounded-3xl
@@ -26,7 +32,7 @@ const Left = () => {
                 transition={{ delay: 0.2 }}
                 className="text-2xl font-bold mb-10"
             >
-                Daily Tracker
+                Dgf 
             </motion.div>
 
             {/* Navigation */}
@@ -42,7 +48,7 @@ const Left = () => {
               transition-colors
             "
                     >
-                       <Dashboard /> 
+                       <LayoutDashboard /> 
                     </motion.div>
                 </Link>
 
@@ -57,7 +63,7 @@ const Left = () => {
               transition-colors
             "
                     >
-                        Meal
+                      <CookingPot /> 
                     </motion.div>
                 </Link>
 
@@ -72,7 +78,7 @@ const Left = () => {
               transition-colors
             "
                     >
-                        Workout
+                      <Dumbbell /> 
                     </motion.div>
                 </Link>
 
@@ -87,7 +93,7 @@ const Left = () => {
               transition-colors
             "
                     >
-                        Study
+                      <NotebookPen />
                     </motion.div>
                 </Link>
             </div>
@@ -106,10 +112,13 @@ const Left = () => {
           transition-colors
         "
             >
-                Log Out
+               <LogOut />
             </motion.div>
         </motion.div>
     );
 };
 
 export default Left;
+
+
+

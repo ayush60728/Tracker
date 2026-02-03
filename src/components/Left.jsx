@@ -1,6 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
 import { motion, LayoutGroup } from "framer-motion";
-import MagneticGlassItem from "./MagneticGlassItem";
 
 const navItems = [
   { name: "Dashboard", path: "/" },
@@ -17,7 +16,7 @@ const Left = () => {
       className="
         fixed top-7 left-3
         h-[90vh] w-56
-        bg-[#0a1a3f]/90 backdrop-blur-xl
+        bg-[#0F1521]/80 backdrop-blur-xl
         text-white
         rounded-3xl
         px-6 py-8
