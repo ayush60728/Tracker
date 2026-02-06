@@ -30,9 +30,9 @@ const Left = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="text-2xl font-bold mb-10"
+            
             >
-                Dgf 
+                <img src="src/assets/logo.png" alt="" />
             </motion.div>
 
             {/* Navigation */}
@@ -48,7 +48,7 @@ const Left = () => {
               transition-colors
             "
                     >
-                       <LayoutDashboard /> 
+                        <LayoutDashboard />
                     </motion.div>
                 </Link>
 
@@ -63,7 +63,7 @@ const Left = () => {
               transition-colors
             "
                     >
-                      <CookingPot /> 
+                        <CookingPot />
                     </motion.div>
                 </Link>
 
@@ -78,7 +78,7 @@ const Left = () => {
               transition-colors
             "
                     >
-                      <Dumbbell /> 
+                        <Dumbbell />
                     </motion.div>
                 </Link>
 
@@ -93,7 +93,7 @@ const Left = () => {
               transition-colors
             "
                     >
-                      <NotebookPen />
+                        <NotebookPen />
                     </motion.div>
                 </Link>
             </div>
@@ -112,7 +112,7 @@ const Left = () => {
           transition-colors
         "
             >
-               <LogOut />
+                <LogOut />
             </motion.div>
         </motion.div>
     );
