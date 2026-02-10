@@ -47,5 +47,5 @@ const MealCard = ({ title, emoji }) => {
     </div>
   );
 };
-  
+
 export default Meal;
