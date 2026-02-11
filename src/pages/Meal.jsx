@@ -1,4 +1,4 @@
-import Meal from "../components/meal"
+import Meal from "../components/Meal"
 import Left from "../components/left"
 const Meal_page = () => {
   return (
