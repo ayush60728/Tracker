@@ -4,6 +4,7 @@ import Meal_page from "./pages/Meal";
 import Workout_page from "./pages/Workout_page";
 import Study_page from "./pages/study_page";
 import Login_page from "./pages/Login_page";
+import Login_box from "./components/Login_box";
 function App() {
   return (
     <>
@@ -14,6 +15,10 @@ function App() {
         <Route path="/workout" element={<Workout_page />} />
         <Route path="/study" element={<Study_page/>} />
       </Routes> */}
+
+      <Routes>     
+        <Route path="/Login" element={<Login_box/>} />
+      </Routes>
     </>
   );
 }

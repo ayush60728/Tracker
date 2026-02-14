@@ -30,7 +30,7 @@ const Left = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
-            
+
             >
                 <img src="src/assets/logo.png" alt="" />
             </motion.div>
@@ -98,22 +98,7 @@ const Left = () => {
                 </Link>
             </div>
 
-            {/* Logout */}
-            <motion.div
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 260 }}
-                className="
-          px-4 py-3 rounded-xl
-          cursor-pointer
-          text-red-300
-          bg-white/5
-          border border-white/10
-          hover:bg-red-500/20
-          transition-colors
-        "
-            >
-                <LogOut />
-            </motion.div>
+
         </motion.div>
     );
 };

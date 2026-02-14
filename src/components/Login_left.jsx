@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
+import Login_box from "../components/Login_box"
 
 const Tick = () => {
     return <FaCheckCircle className="text-green-500 text-xl" />;
 };
 
 const Login_left = () => {
+
+    const [visible, setVisible] = useState(false);   // ✅ fixed spelling
+
     return (
         <>
             {/* HERO SECTION */}
-            <div className="bg-[#0F1521]/98 backdrop-blur-xl min-h-screen w-screen flex text-white font-bold overflow-x-hidden">
+            <div className="bg-[#0F1521]/98 backdrop-blur-xl min-h-screen w-screen flex text-white font-bold overflow-x-hidden relative">
                 <div className="flex ml-40 mt-20">
                     <div>
                         {/* Focus Badge */}
@@ -56,17 +60,20 @@ const Login_left = () => {
                 alt="Lamp"
                 className="absolute w-64 top-24 right-52 hover:scale-110 transition-all duration-300"
             />
-            
+
             <img
+                onClick={() => setVisible(true)}
                 src="src/assets/bulb.png"
                 alt="Bulb"
-                className="absolute w-64 top-40 right-55 hover:scale-110 transition-all duration-300"
+                className="absolute w-64 top-40 right-55 hover:scale-110 transition-all duration-300 cursor-pointer"
             />
 
             <img
+                // ✅ click opens login
+                onClick={() => setVisible(true)} 
                 src="src/assets/plate.png"
                 alt="Plate"
-                className="absolute w-64 top-[420px] right-[480px] hover:rotate-180 transition-transform duration-1000"
+                className="absolute w-64 top-[420px] right-[480px] hover:rotate-180 transition-transform duration-1000 cursor-pointer"
             />
 
             {/* FEATURES SECTION */}
@@ -78,49 +85,34 @@ const Login_left = () => {
                 <div className="flex justify-center gap-10">
                     {/* Study */}
                     <div className="border-4 rounded-2xl h-[500px] w-[420px] bg-[#0F1521]/96 p-6 text-center">
-                        <img
-                            src="src/assets/book.pixel.png"
-                            alt=""
-                            className="h-64 mx-auto"
-                        />
+                        <img src="src/assets/book.pixel.png" alt="" className="h-64 mx-auto" />
                         <div className="font-bold text-3xl text-white underline mt-4">
                             Study Tracker
                         </div>
                         <div className="font-bold text-white text-xl mt-4">
-                            Organize your study schedule and keep track of your assignments
-                            and goals.
+                            Organize your study schedule and keep track of assignments and goals.
                         </div>
                     </div>
 
                     {/* Meal */}
                     <div className="border-4 rounded-2xl h-[500px] w-[420px] bg-[#0F1521]/96 p-6 text-center">
-                        <img
-                            src="src/assets/calendar.pixel.png"
-                            alt=""
-                            className="h-64 mx-auto"
-                        />
+                        <img src="src/assets/calendar.pixel.png" alt="" className="h-64 mx-auto" />
                         <div className="font-bold text-3xl text-white underline mt-4">
                             Meal Planner
                         </div>
                         <div className="font-bold text-white text-xl mt-4">
-                            Plan your meals, track your nutrition, and stay healthy with
-                            personalized meal logs.
+                            Plan your meals, track nutrition, and stay healthy.
                         </div>
                     </div>
 
                     {/* Workout */}
                     <div className="border-4 rounded-2xl h-[500px] w-[420px] bg-[#0F1521]/96 p-6 text-center">
-                        <img
-                            src="src/components/dumbbell (1).png"
-                            alt=""
-                            className="h-64 mx-auto"
-                        />
+                        <img src="src/assets/dumbbell (1).png" alt="" className="h-64 mx-auto" />
                         <div className="font-bold text-3xl text-white underline mt-4">
                             Workout Tracker
                         </div>
                         <div className="font-bold text-white text-xl mt-4">
-                            Log your workouts, track your progress, and reach your fitness
-                            goals.
+                            Log workouts, track progress, and reach fitness goals.
                         </div>
                     </div>
                 </div>
@@ -136,15 +128,13 @@ const Login_left = () => {
                 </ul>
 
                 <div className="mt-16 font-bold text-xl">
-                    © 2024 Tracker. All rights reserved.
+                    ©️ 2024 Tracker. All rights reserved.
                 </div>
 
                 <div className="mt-4 font-bold text-xl">
-                    Need Help?{" "}
-                    <span className="underline">support@tracker.com</span>
+                    Need Help? <span className="underline">support@tracker.com</span>
                 </div>
 
-                {/* Social Icons */}
                 <div className="flex justify-center gap-8 mt-10">
                     <a
                         href="https://www.linkedin.com/in/ayush-kumar-13a0b2336/?skipRedirect=true"
@@ -163,6 +153,22 @@ const Login_left = () => {
                     </a>
                 </div>
             </div>
+
+            {/* LOGIN OVERLAY (VERY IMPORTANT PART) */}
+            {visible && (
+                <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-10 flex items-center justify-center">
+                    <Login_box />
+
+                    {/* Close Button */}
+                    <button
+                        onClick={() => setVisible(false)}
+                        className="absolute top-10 right-10 text-white text-3xl"
+                    >
+                        ✕
+                    </button>
+                </div>
+            )}
+
         </>
     );
 };

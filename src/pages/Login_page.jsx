@@ -5,9 +5,9 @@ import Login_box from '../components/Login_box'
 const Login_page = () => {
     return (
         <div>
-            {/* <Login_left />
-            <Sidebar_login /> */}
-            <Login_box />
+            <Login_left />
+            <Sidebar_login />
+            {/* <Login_box /> */}
         </div>
     )
 }
