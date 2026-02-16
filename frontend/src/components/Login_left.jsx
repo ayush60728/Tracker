@@ -70,7 +70,7 @@ const Login_left = () => {
 
             <img
                 // ✅ click opens login
-                onClick={() => setVisible(true)} 
+                onClick={() => setVisible(true)}
                 src="src/assets/plate.png"
                 alt="Plate"
                 className="absolute w-64 top-[420px] right-[480px] hover:rotate-180 transition-transform duration-1000 cursor-pointer"
