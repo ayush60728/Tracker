@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 
 const userschema = new Schema({
     email: {
-        type: [String],
+        type: String,   
         required: true,
         unique: true,
         trim: true,
@@ -12,13 +12,13 @@ const userschema = new Schema({
         immutable: true,
     },
     password: {
-        type: [String],
+        type: String,   
         required: true,
     }
 }, {
     timestamps: true
-}
-)
+});
+
 
 const User = mongoose.model("User", userschema);
 
