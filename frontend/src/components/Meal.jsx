@@ -37,7 +37,7 @@ const Meal = () => {
       if (!type || !meal || !quantity) return;
 
       const response = await axios.post(
-        "http://localhost:3000/api/ai",
+        "https://mf-backend-0cqj.onrender.com/api/ai",
         { meal, quantity },
         { withCredentials: true }
       );
