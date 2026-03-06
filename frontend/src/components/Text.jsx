@@ -1,4 +1,4 @@
-import LineChart from "../components/Linechart";
+import LineChart from "../components/LineChart";
 import { Link , useNavigate } from "react-router-dom";
 
 const Text = () => {
