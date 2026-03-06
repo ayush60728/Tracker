@@ -6,7 +6,7 @@ const Valuecard = () => {
   
   const getdData = async () => {
 
-    const result = await axios.get("http://localhost:3000/value/get",
+    const result = await axios.get("https://mf-backend-0cqj.onrender.com/value/get",
       { withCredentials: true })
     setdata(result.data);
     console.log(result?.data);
