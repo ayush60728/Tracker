@@ -30,7 +30,7 @@ const Left = () => {
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.2 }}
                 >
-                    <img className="w-11 h-10 ml-1" src="/public/Untitled design (1) (1).png" alt="" />
+                    <img className="w-11 h-10 ml-1" src="/Untitled design (1) (1).png" alt="" />
                 </motion.div>
 
                 {/* Navigation */}
