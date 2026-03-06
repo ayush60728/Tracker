@@ -1,39 +1,28 @@
+require("dotenv").config();
 const express = require("express");
 const { register, login, logout } = require("../controllers/userAuthent");
 const app = express()
-require("dotenv").config();
+
 const main = require('../config/database.js')
 const cookieParser = require('cookie-parser')
 app.use(express.json());
 app.use(cookieParser())
 const authRouter = require("../Routes/userAuth");
 const redisclient = require("../config/redis.js");
+const cors = require("cors");
+const aiRouter = require("../Routes/aiRoute.js");
+const ValueRouter = require("../Routes/ValueDB.js")
+
+
+app.use(cors({
+    origin: "http://localhost:5173", 
+    credentials: true
+}));
 
 app.use('/user', authRouter);
+app.use('/api',aiRouter);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+app.use('/value',ValueRouter);
 
 
 
@@ -46,8 +35,8 @@ const initalizeconnection = async () => {
             console.log("Started listening PORT number " + process.env.PORT);
         })
     }
-    catch(err){
-        res.status(401).send("Error: " + err)
+    catch (err) {
+        console.error("Error: " + err)
     }
 }
 

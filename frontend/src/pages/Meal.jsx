@@ -1,11 +1,13 @@
 import Meal from "../components/Meal"
 import Left from "../components/left"
+
 const Meal_page = () => {
   return (
-    <div className="  bg-gray-200">
+    <div className="bg-[#060D1A]/96">
       <Left/>
-      <div className="ml-50"><Meal/></div>
+      <div className="ml-59"><Meal/></div>
     </div>
   )
 }
+
 export default Meal_page

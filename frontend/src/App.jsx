@@ -1,23 +1,18 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home_page from "./pages/Home_page";
 import Meal_page from "./pages/Meal";
-import Workout_page from "./pages/Workout_page";
-import Study_page from "./pages/study_page";
 import Login_page from "./pages/Login_page";
-import Login_box from "./components/Login_box";
+import Chatwindow from "./components/Chatwindow";
 function App() {
   return (
     <>
-    <Login_page />
-      {/* <Routes>
-        <Route path="/" element={<Home_page />} />
+      <Routes>
+        <Route path="/" element={<Login_page />} />    
+        <Route path="/homepage" element={<Home_page />} />
         <Route path="/meal" element={<Meal_page />} />
-        <Route path="/workout" element={<Workout_page />} />
-        <Route path="/study" element={<Study_page/>} />
-      </Routes> */}
-
-      <Routes>     
-        <Route path="/Login" element={<Login_box/>} />
+        <Route path="/chat" element={<Chatwindow />} />  
+        {/* <Route path="/workout" element={<Workout_page />} />
+        <Route path="/study" element={<Study_page />} /> */}
       </Routes>
     </>
   );

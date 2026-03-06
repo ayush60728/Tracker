@@ -9,15 +9,21 @@ require("dotenv").config();
 const register = async (req, res) => {
     validate(req.body);
     try {
-        const { email, password } = req.body;
-        req.body.password = await bcrypt.hash(password, 10);
-        const user = await User.create(req.body);
-        const token = jwt.sign({ _id: user._id, email: email }, process.env.JWT_KEY, { expiresIn: "1d" });
+        const { name, email, password } = req.body;
+        // req.body.password = await bcrypt.hash(password, 10);
+        const hashedPassword = await bcrypt.hash(password, 10);
+
+        const user = await User.create({
+            name: name,
+            email: email,
+            password: hashedPassword
+        });
+        const token = jwt.sign({ _id: user._id, email: email, name: name }, process.env.JWT_KEY, { expiresIn: "1d" });
         res.cookie('token', token, { maxAge: 1000 * 60 * 60 * 24 * 365 }); //1 year
         res.status(201).send("User Registered Successfully");
     }
     catch (err) {
-        res.status(400).send("Error: " + err)
+        res.status(400).send("Error: " + err.message)
     }
 }
 
@@ -40,7 +46,7 @@ const login = async (req, res) => {
         if (!match)
             throw new Error("Invalid Credentials");
 
-        const token = jwt.sign({ _id: user._id, email: email }, process.env.JWT_KEY);
+        const token = jwt.sign({ _id: user._id, email: email }, process.env.JWT_KEY, { expiresIn: '1d' });
         res.cookie('token', token, { maxAge: 1000 * 60 * 60 * 24 * 365 }); //1 year
         res.status(200).send("Logged In Successfully");
 

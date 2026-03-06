@@ -1,103 +1,90 @@
-import { Link, useLocation } from "react-router-dom";
-import { motion, LayoutGroup } from "framer-motion";
-
-const navItems = [
-  { name: "Dashboard", path: "/" },
-  { name: "Meal", path: "/meal" },
-  { name: "Workout", path: "/workout" },
-  { name: "Study", path: "/study" },
-];
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Left = () => {
-  const location = useLocation();
+  const navigate = useNavigate();
+
+  const logout = async () => {
+    try {
+      await axios.post(
+        "http://localhost:3000/user/logout",
+        {},
+        { withCredentials: true }
+      );
+      navigate("/");
+    } catch (err) {
+      console.log("Logout error:", err);
+    }
+  };
 
   return (
     <div
       className="
-        fixed top-7 left-3
-        h-[90vh] w-56
-        bg-[#0F1521]/80 backdrop-blur-xl
-        text-white
-        rounded-3xl
-        px-6 py-8
+        fixed mt-20 ml-5
+        h-[80vh] w-16 md:w-56
+        bg-[#0a1a3f]/50
+        text-white rounded-3xl
+        px-2 md:px-6 py-8
         flex flex-col
-        shadow-xl border border-white/10
+        shadow-xl border-2 border-white/60
       "
     >
       {/* Logo */}
-      <div className="text-2xl font-semibold mb-10 tracking-wide">
+      <div className="mx-auto md:ml-11 w-8 h-8 md:w-15 md:h-15">
+        <img src="src/assets/logopart-2 (1).png" alt="" />
+      </div>
+
+      {/* Title — hidden on mobile */}
+      <div className="hidden md:block text-2xl font-semibold mb-10 tracking-wide p-2 underline">
         Daily Tracker
       </div>
 
-      {/* Navigation */}
-      <LayoutGroup>
-        <div className="flex flex-col gap-3 text-[17px]">
-          {navItems.map((item) => {
-            const isActive = location.pathname === item.path;
+      {/* Dashboard */}
+      <Link
+        to="/homepage"
+        className="
+          flex items-center justify-center md:justify-start
+          px-2 md:px-4 py-3 rounded-2xl
+          transition-all duration-300 ease-in-out
+          hover:bg-white/10 hover:scale-105
+          text-sm md:text-base mt-4 md:mt-0
+        "
+      >
+        <span className="md:hidden text-xs text-center leading-tight">🏠</span>
+        <span className="hidden md:block">Dashboard</span>
+      </Link>
 
-            return (
-              <Link key={item.name} to={item.path} className="relative">
-                {/* Glass active pill */}
-                {isActive && (
-                  <motion.div
-                    layoutId="glass-pill"
-                    className="
-                      absolute inset-0 rounded-2xl
-                      bg-white/10 backdrop-blur-md
-                      border border-white/20
-                      shadow-lg
-                    "
-                    transition={{
-                      type: "spring",
-                      stiffness: 160,
-                      damping: 26,
-                    }}
-                  />
-                )}
-
-                <MagneticGlassItem className="relative z-10">
-                  <motion.div
-                    whileHover={{ scale: 1.02 }}
-                    transition={{
-                      type: "tween",
-                      ease: [0.25, 0.1, 0.25, 1],
-                      duration: 0.25,
-                    }}
-                    className="
-                      px-4 py-3 rounded-2xl
-                      hover:bg-white/5
-                    "
-                  >
-                    {item.name}
-                  </motion.div>
-                </MagneticGlassItem>
-              </Link>
-            );
-          })}
-        </div>
-      </LayoutGroup>
+      {/* Meal */}
+      <Link
+        to="/meal"
+        className="
+          flex items-center justify-center md:justify-start
+          px-2 md:px-4 py-3 rounded-2xl mt-3
+          transition-all duration-300 ease-in-out
+          hover:bg-white/10 hover:scale-105
+          text-sm md:text-base
+        "
+      >
+        <span className="md:hidden text-xs text-center leading-tight">🍽️</span>
+        <span className="hidden md:block">Meal</span>
+      </Link>
 
       {/* Logout */}
-      <MagneticGlassItem>
-        <motion.div
-          whileHover={{ scale: 1.02 }}
-          transition={{
-            type: "tween",
-            ease: [0.25, 0.1, 0.25, 1],
-            duration: 0.25,
-          }}
-          className="
-            mt-80 px-4 py-3 rounded-2xl
-            cursor-pointer text-red-300
-            bg-white/5 backdrop-blur-md
-            border border-white/10
-            hover:bg-red-500/20
-            
-          "
-        >
-          Log Out
-        </motion.div>
-      </MagneticGlassItem>
+      <div
+        onClick={logout}
+        className="
+          mt-auto flex items-center justify-center md:justify-start
+          px-2 md:px-4 py-3 rounded-2xl
+          cursor-pointer text-red-400
+          bg-white/10 border border-white/10
+          hover:bg-red-500/20
+          transition-all duration-300
+          text-sm md:text-base
+        "
+      >
+        <span className="md:hidden">🚪</span>
+        <span className="hidden md:block">Log Out</span>
+      </div>
     </div>
   );
 };

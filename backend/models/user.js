@@ -3,6 +3,10 @@ require("dotenv").config();
 const { Schema } = mongoose;
 
 const userschema = new Schema({
+    name: {
+        type:String,
+        required: true,
+    },
     email: {
         type: String,   
         required: true,
