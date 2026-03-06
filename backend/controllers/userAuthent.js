@@ -19,7 +19,12 @@ const register = async (req, res) => {
             password: hashedPassword
         });
         const token = jwt.sign({ _id: user._id, email: email, name: name }, process.env.JWT_KEY, { expiresIn: "1d" });
-        res.cookie('token', token, { maxAge: 1000 * 60 * 60 * 24 * 365 }); //1 year
+        res.cookie("token", token, {
+            httpOnly: true,
+            secure: true,
+            sameSite: "none",
+            maxAge: 1000 * 60 * 60 * 24 * 365
+        });
         res.status(201).send("User Registered Successfully");
     }
     catch (err) {
@@ -47,7 +52,12 @@ const login = async (req, res) => {
             throw new Error("Invalid Credentials");
 
         const token = jwt.sign({ _id: user._id, email: email }, process.env.JWT_KEY, { expiresIn: '1d' });
-        res.cookie('token', token, { maxAge: 1000 * 60 * 60 * 24 * 365 }); //1 year
+        res.cookie("token", token, {
+            httpOnly: true,
+            secure: true,
+            sameSite: "none",
+            maxAge: 1000 * 60 * 60 * 24 * 365
+        });
         res.status(200).send("Logged In Successfully");
 
     }

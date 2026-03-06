@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+axios.defaults.withCredentials = true;
+
 const Valuecard = () => {
   const [data, setdata] = useState(null);
   

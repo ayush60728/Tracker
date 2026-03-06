@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+
+axios.defaults.withCredentials = true;
 import { useNavigate } from "react-router-dom";
 
 const Login_box = () => {

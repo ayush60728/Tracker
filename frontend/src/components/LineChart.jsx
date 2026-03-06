@@ -2,6 +2,8 @@
 
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
 import axios from "axios";
+
+axios.defaults.withCredentials = true;
 import { useState, useEffect } from "react";
 
 const LineCharts = () => {

@@ -1,5 +1,6 @@
 import axios from "axios";
 
+axios.defaults.withCredentials = true;
 const Give_value = async (data) => {
   // console.log(data);
   const { protein, fats, kcal } = data;

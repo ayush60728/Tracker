@@ -12,7 +12,7 @@ const redisclient = require("../config/redis.js");
 const cors = require("cors");
 const aiRouter = require("../Routes/aiRoute.js");
 const ValueRouter = require("../Routes/ValueDB.js")
-
+app.set("trust proxy", 1);
 
 app.use(cors({
     origin: "https://mf-frontend-qs7c.onrender.com", 

@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Send } from "lucide-react";
 import axios from "axios";
+axios.defaults.withCredentials = true;
 import ReactMarkdown from "react-markdown";
 
 function Chatwindow() {
