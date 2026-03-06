@@ -1,5 +1,5 @@
 import Meal from "../components/Meal"
-import Left from "../components/left"
+import Left from "../components/Left"
 
 const Meal_page = () => {
   return (
