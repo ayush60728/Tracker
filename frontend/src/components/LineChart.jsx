@@ -11,7 +11,7 @@ const LineCharts = () => {
     useEffect(() => {
         const getData = async () => {
             try {
-                const result = await axios.get("http://localhost:3000/value/graph", {
+                const result = await axios.get("https://mf-backend-0cqj.onrender.com/value/graph", {
                     withCredentials: true
                 });
 
