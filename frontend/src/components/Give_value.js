@@ -5,7 +5,7 @@ const Give_value = async (data) => {
   const { protein, fats, kcal } = data;
   try {
 
-    await axios.post("http://localhost:3000/value/store", {
+    await axios.post("https://mf-backend-0cqj.onrender.com/value/store", {
       protein,
       kcal,
       fats
