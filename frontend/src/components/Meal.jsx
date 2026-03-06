@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import Valuecard from "../components/valuecard";
+import Valuecard from "../components/Valuecard";
 import Give_value from "./give_value";
 
 const Meal = () => {
