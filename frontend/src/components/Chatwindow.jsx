@@ -33,7 +33,7 @@ function Chatwindow() {
     reset();
 
     try {
-      const response = await axios.post("http://localhost:3000/api/chat",
+      const response = await axios.post("https://mf-backend-0cqj.onrender.com/api/chat",
         { messages: updatedMessages },
         { withCredentials: true });
 
