@@ -1,5 +1,5 @@
-import Left from "../components/left"
-import Text from "../components/text"
+import Left from "../components/Left"
+import Text from "../components/Text"
 import Cale from "../components/Cale"
 
 const Home_page = () => {
