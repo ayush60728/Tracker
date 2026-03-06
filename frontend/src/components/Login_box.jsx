@@ -13,7 +13,7 @@ const Login_box = () => {
     const handle_register = async (e) => {
         e.preventDefault();
         try {
-            await axios.post("http://localhost:3000/user/register", {
+            await axios.post("https://mf-backend-0cqj.onrender.com/user/register", {
                 name, email, password
             }, { withCredentials: true });
             console.log("User registered successfully");
@@ -26,7 +26,7 @@ const Login_box = () => {
     const handle_login = async (e) => {
         e.preventDefault();
         try {
-            await axios.post("http://localhost:3000/user/login", {
+            await axios.post("https://mf-backend-0cqj.onrender.com/user/login", {
                 email, password
             }, { withCredentials: true });
             console.log("User logged in successfully");
