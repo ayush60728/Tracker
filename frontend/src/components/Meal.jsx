@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import Valuecard from "../components/Valuecard";
-import Give_value from "./give_value";
+import Give_value from "./Give_value";
 
 const Meal = () => {
   const [breakfastmeal, setbreakfastmeal] = useState("");
