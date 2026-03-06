@@ -7,7 +7,7 @@ const Left = () => {
   const logout = async () => {
     try {
       await axios.post(
-        "http://localhost:3000/user/logout",
+        "https://mf-backend-0cqj.onrender.com/user/logout",
         {},
         { withCredentials: true }
       );
