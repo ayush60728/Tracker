@@ -15,7 +15,7 @@ const ValueRouter = require("../Routes/ValueDB.js")
 
 
 app.use(cors({
-    origin: "http://localhost:5173", 
+    origin: "https://mf-frontend-qs7c.onrender.com", 
     credentials: true
 }));
 
