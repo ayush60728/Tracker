@@ -36,7 +36,7 @@ const Text = () => {
         <div className="relative left-70 font-bold text-2xl">UstaadJi</div>
         <div className="relative  left-63 font-bold text-1xl top-1 text-gray-400">Your Fitness Assistant</div>
         <div className="border-b-2 w-58 relative left-55 top-4 border-2 rounded-4xl text-gray-400"></div>
-        <img className="h-100 flex relative left-80 bottom-47" src="src/assets/roboto (2).png" alt="" />
+        <img className="h-100 flex relative left-80 bottom-47" src="/public/roboto (2).png" alt="" />
       </div>
 
       {/* {small card}

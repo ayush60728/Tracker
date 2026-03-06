@@ -31,7 +31,7 @@ const Left = () => {
     >
       {/* Logo */}
       <div className="mx-auto md:ml-11 w-8 h-8 md:w-15 md:h-15">
-        <img src="src/assets/logopart-2 (1).png" alt="" />
+        <img src="/public/logopart-2 (1).png" alt="" />
       </div>
 
       {/* Title — hidden on mobile */}

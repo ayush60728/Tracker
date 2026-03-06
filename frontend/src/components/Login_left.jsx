@@ -87,7 +87,7 @@ const Login_left = () => {
                 {/* Floating Images */}
                 {/* Floating Images (Hidden on Mobile) */}
                 <motion.img
-                    src="src/assets/lamp.png"
+                    src="/public/lamp.png"
                     alt="Lamp"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -98,7 +98,7 @@ const Login_left = () => {
 
                 <motion.img
                     onClick={() => setVisible(true)}
-                    src="src/assets/bulb.png"
+                    src="/public/bulb.png"
                     alt="Bulb"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -109,7 +109,7 @@ const Login_left = () => {
 
                 <motion.img
                     onClick={() => setVisible(true)}
-                    src="src/assets/plate.png"
+                    src="/public/plate.png"
                     alt="Plate"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -147,7 +147,7 @@ const Login_left = () => {
                         whileHover={{ y: -8 }}
                         className="border border-white/10 rounded-3xl h-[480px] w-[380px] bg-white/5 backdrop-blur-xl p-8 text-center shadow-xl shadow-black/40 hover:border-blue-500/40 transition-all duration-300"
                     >
-                        <img src="src/assets/book.pixel.png" alt="" className="h-56 mx-auto object-contain" />
+                        <img src="/public/book.pixel.png" alt="" className="h-56 mx-auto object-contain" />
                         <div className="font-bold text-2xl text-white mt-6">Study Tracker</div>
                         <div className="text-white/50 text-base mt-3 leading-relaxed font-normal">
                             Organize your study schedule and keep track of assignments and goals.
@@ -162,7 +162,7 @@ const Login_left = () => {
                         whileHover={{ y: -8 }}
                         className="border border-white/10 rounded-3xl h-[480px] w-[380px] bg-white/5 backdrop-blur-xl p-8 text-center shadow-xl shadow-black/40 hover:border-blue-500/40 transition-all duration-300"
                     >
-                        <img src="src/assets/calendar.pixel.png" alt="" className="h-56 mx-auto object-contain" />
+                        <img src="/public/calendar.pixel.png" alt="" className="h-56 mx-auto object-contain" />
                         <div className="font-bold text-2xl text-white mt-6">Meal Planner</div>
                         <div className="text-white/50 text-base mt-3 leading-relaxed font-normal">
                             Plan your meals, track nutrition, and stay healthy every day.
@@ -177,7 +177,7 @@ const Login_left = () => {
                         whileHover={{ y: -8 }}
                         className="border border-white/10 rounded-3xl h-[480px] w-[380px] bg-white/5 backdrop-blur-xl p-8 text-center shadow-xl shadow-black/40 hover:border-blue-500/40 transition-all duration-300"
                     >
-                        <img src="src/assets/dumbbell (1).png" alt="" className="h-56 mx-auto object-contain" />
+                        <img src="/public/dumbbell (1).png" alt="" className="h-56 mx-auto object-contain" />
                         <div className="font-bold text-2xl text-white mt-6">Workout Tracker</div>
                         <div className="text-white/50 text-base mt-3 leading-relaxed font-normal">
                             Log workouts, track progress, and reach your fitness goals.
@@ -201,12 +201,12 @@ const Login_left = () => {
                 <div className="flex justify-center gap-8 mt-8">
                     <a href="https://www.linkedin.com/in/ayush-kumar-13a0b2336/?skipRedirect=true" target="_blank" rel="noreferrer">
                         <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-[#0a1a3f] border border-white/10 hover:border-blue-500/40 transition-all duration-300">
-                            <img src="src/assets/link.png" alt="LinkedIn" className="w-6" />
+                            <img src="/public/link.png" alt="LinkedIn" className="w-6" />
                         </div>
                     </a>
                     <a href="https://x.com/nerdycat0" target="_blank" rel="noreferrer">
                         <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-[#0a1a3f] border border-white/10 hover:border-blue-500/40 transition-all duration-300">
-                            <img src="src/assets/xx.png" alt="X" className="w-8 rounded-2xl" />
+                            <img src="/public/xx.png" alt="X" className="w-8 rounded-2xl" />
                         </div>
                     </a>
                 </div>

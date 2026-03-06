@@ -41,7 +41,7 @@ const Login_box = () => {
 
             {/* Logo + Title */}
             <div className="flex items-center justify-center gap-3 mt-6">
-                <img src="src/assets/logopart-2 (1).png" alt="" className="w-16 h-12" />
+                <img src="/public/logopart-2 (1).png" alt="" className="w-16 h-12" />
                 <span className="font-bold text-white text-4xl tracking-wide">
                     Welcomes You
                 </span>
