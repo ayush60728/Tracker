@@ -9,7 +9,7 @@ const Left = () => {
   const logout = async () => {
     try {
       await axios.post(
-        "https://mf-backend-0cqj.onrender.com/user/logout",
+        import.meta.env.VITE_URL + "user/logout",
         {},
         { withCredentials: true }
       );

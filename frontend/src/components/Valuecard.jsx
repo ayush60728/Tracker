@@ -8,7 +8,7 @@ const Valuecard = () => {
   
   const getdData = async () => {
 
-    const result = await axios.get("https://mf-backend-0cqj.onrender.com/value/get",
+    const result = await axios.get(import.meta.env.VITE_URL + "value/get",
       { withCredentials: true })
     setdata(result.data);
     console.log(result?.data);

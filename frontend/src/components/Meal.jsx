@@ -39,7 +39,7 @@ const Meal = () => {
       if (!type || !meal || !quantity) return;
 
       const response = await axios.post(
-        "https://mf-backend-0cqj.onrender.com/api/ai",
+        import.meta.env.VITE_URL + "meal/add",
         { meal, quantity },
         { withCredentials: true }
       );

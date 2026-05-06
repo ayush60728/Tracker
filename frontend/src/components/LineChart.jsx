@@ -13,7 +13,7 @@ const LineCharts = () => {
     useEffect(() => {
         const getData = async () => {
             try {
-                const result = await axios.get("https://mf-backend-0cqj.onrender.com/value/graph", {
+                const result = await axios.get(import.meta.env.VITE_URL + "value/graph", {
                     withCredentials: true
                 });
 

@@ -15,7 +15,8 @@ const Login_box = () => {
     const handle_register = async (e) => {
         e.preventDefault();
         try {
-            await axios.post("https://mf-backend-0cqj.onrender.com/user/register", {
+            console.log(import.meta.env.VITE_URL)
+            await axios.post(import.meta.env.VITE_URL + "user/register", {
                 name, email, password
             }, { withCredentials: true });
             console.log("User registered successfully");
@@ -28,7 +29,8 @@ const Login_box = () => {
     const handle_login = async (e) => {
         e.preventDefault();
         try {
-            await axios.post("https://mf-backend-0cqj.onrender.com/user/login", {
+            console.log(import.meta.env.VITE_URL)
+            await axios.post(import.meta.env.VITE_URL + "user/login", {
                 email, password
             }, { withCredentials: true });
             console.log("User logged in successfully");

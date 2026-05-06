@@ -15,7 +15,7 @@ const ValueRouter = require("../Routes/ValueDB.js")
 app.set("trust proxy", 1);
 
 app.use(cors({
-    origin: "https://mf-frontend-qs7c.onrender.com", 
+    origin: process.env.URL,
     credentials: true
 }));
 

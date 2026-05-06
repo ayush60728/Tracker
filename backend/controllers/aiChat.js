@@ -9,7 +9,7 @@ const aiChat = async (req, res) => {
     const message = req.body.messages; // should be array
 
     const response = await ai.models.generateContent({
-      model: "gemini-2.0-flash",
+      model: "gemini-2.0-flash-lite",
       contents: message,
       config:{
       systemInstruction: `
@@ -46,11 +46,12 @@ BANNED PHRASES:
 `,
    } });
 
-    const text = response.text;
+    const text = response.text(); // add ()
     console.log("AI:", text);
 
     return res.status(200).json({ message: text }); 
-  } catch (err) {
+  } 
+  catch (err) {
     console.log("CHAT ERROR:", err);
     return res.status(500).json({ error: err.message });
   }
